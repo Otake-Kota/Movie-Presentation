@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  belongs_to :gender
-  belongs_to :blood_type
+  belongs_to :gender, optional: true
+  belongs_to :blood_type, optional: true
 
   before_save { self.email = email.downcase }
   validates :name, presence: true, length: { maximum: 50 }
