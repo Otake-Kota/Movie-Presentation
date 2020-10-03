@@ -14,7 +14,9 @@ User.create!(name:  "Example User",
                     blood_type_id: 1,
                          birthday: "1999-08-04",
                           comment: "よろしくお願いします。",
-                            admin: true)
+                            admin: true,
+                        activated: true,
+                     activated_at: Time.zone.now)
 
 99.times do |n|
   name  = Faker::Name.name
@@ -27,5 +29,7 @@ User.create!(name:  "Example User",
                            gender_id: 1,
                        blood_type_id: 2,
                             birthday: "1999-01-01",
-                             comment: "映画が好きです")
+                             comment: "映画が好きです",
+                           activated: true,
+                        activated_at: Time.zone.now)
 end

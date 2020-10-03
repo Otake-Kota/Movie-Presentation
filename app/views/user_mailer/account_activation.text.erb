@@ -1,0 +1,5 @@
+<%= @user.name %>さん、
+
+ようこそMoviePresentationへ!下記のリンクををクリックして登録を続けてください!
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>

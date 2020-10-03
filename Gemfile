@@ -14,6 +14,7 @@ gem 'faker',          '1.7.3'
 gem 'rails-i18n'
 gem 'will_paginate',           '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
+gem 'mail-iso-2022-jp'
 
 gem 'puma',         '3.9.1'
 gem 'sass-rails',   '5.0.6'
