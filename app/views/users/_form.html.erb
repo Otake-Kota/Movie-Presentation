@@ -1,0 +1,33 @@
+<%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages', object: @user %>
+
+  <%= f.label :名前 %>
+  <%= f.text_field :name, class: 'form-control' %>
+
+  <%= f.label :メールアドレス %>
+  <%= f.email_field :email, class: 'form-control' %>
+
+  <%= f.label :パスワード %>
+  <%= f.password_field :password, class: 'form-control' %>
+
+  <%= f.label :確認 %>
+  <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+  <% if logged_in? %>
+
+    <%= f.label :性別 %>
+    <%= f.select :gender_id, Gender.all.map{|o| [o.name, o.id]}, :include_blank => "選択する", class: 'form-control' %>
+
+    <%= f.label :血液型 %>
+    <%= f.select :blood_type_id, BloodType.all.map{|o| [o.name, o.id]}, :include_blank => "選択する", class: 'form-control' %>
+
+    <%= f.label :誕生日 %>
+    <%= f.date_field :birthday, class: 'form-control' %>
+
+    <%= f.label :自己紹介 %>
+    <%= f.text_field :comment, class: 'form-control' %>
+
+  <% end %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

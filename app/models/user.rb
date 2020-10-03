@@ -12,7 +12,7 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false } # uniqueness => 一意性
   # has_sequre_password => password, password_confirmation, autthenticateメソッドが使える
   has_secure_password
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
 
   def User.digest(string)

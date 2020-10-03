@@ -10,7 +10,10 @@ end
 gem 'rails',        '5.1.6'
 gem 'bootstrap-sass', '3.3.7'
 gem 'bcrypt', '3.1.12'
+gem 'faker',          '1.7.3'
 gem 'rails-i18n'
+gem 'will_paginate',           '3.1.6'
+gem 'bootstrap-will_paginate', '1.0.0'
 
 gem 'puma',         '3.9.1'
 gem 'sass-rails',   '5.0.6'
