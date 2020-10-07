@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   belongs_to :gender, optional: true
   belongs_to :blood_type, optional: true
+  has_many   :movies, dependent: :destroy
 
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save :downcase_email

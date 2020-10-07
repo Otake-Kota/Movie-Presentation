@@ -1,0 +1,51 @@
+one:
+  id: 1
+  name: コメディー
+
+two:
+  id: 2
+  name: SF
+
+three:
+  id: 3
+  name: アクション
+
+four:
+  id: 4
+  name: 恋愛
+
+five:
+  id: 5
+  name: サスペンス
+
+six:
+  id: 6
+  name: スリラー
+
+seven:
+  id: 7
+  name: ミステリー
+
+eight:
+  id: 8
+  name: ホラー
+
+nine:
+  id: 9
+  name: スポーツ
+
+ten:
+  id: 10
+  name: 青春
+
+eleven:
+  id: 11
+  name: ファミリー
+
+twelve:
+  id: 12
+  name: ミュージカル
+
+thirteen:
+  id: 13
+  name: 成人

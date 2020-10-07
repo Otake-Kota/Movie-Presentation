@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @movies = @user.movies.paginate(page: params[:page])
   end
 
   def new
@@ -60,14 +61,6 @@ class UsersController < ApplicationController
                                  :blood_type_id,
                                  :birthday,
                                  :comment)
-  end
-
-  def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = "ログインしてください"
-      redirect_to login_url
-    end
   end
 
   def correct_user

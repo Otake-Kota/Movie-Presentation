@@ -8,3 +8,17 @@ ja:
         email: メールアドレス
         password: パスワード
         password_confirmation: 確認用パスワード
+
+        
+  activerecord:
+    models:
+      movie: 映画
+    attributes:
+      movie:
+        name: 映画名
+        content: 映画の説明
+        screening_date: 上映日
+        spoiler: ネタバレ
+        user_id: ユーザー
+        category_id: カテゴリー
+        movie_maxim: 一言

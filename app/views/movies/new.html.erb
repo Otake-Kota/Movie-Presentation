@@ -1,0 +1,36 @@
+<%= provide(:title, 'New') %>
+
+<div class="layout movie_new">
+  <h1>映画プレゼン</h1>
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@movie) do |f| %>
+
+        <%= render 'shared/error_messages', object: f.object %>
+
+        <%= f.label :一言 %>
+        <%= f.text_field :movie_maxim, placeholder: "心に残っている名言や、感想を一言で紹介" , class: 'form-control' %>
+
+        <%= f.label :映画名 %>
+        <%= f.text_field :name, placeholder: "映画名", class: 'form-control' %>
+
+        <%= f.label :映画の説明 %>
+        <%= f.text_area :content, placeholder: "映画の説明", class: 'form-control content' %>
+
+        <%= f.label :ネタバレ, class: "checkbox inline" do %>
+          <%= f.check_box :spoiler %>
+          <span>ネタバレを含む場合はチェック</span>
+        <% end %>
+
+        <%= f.label :カテゴリー %>
+        <%= f.select :category_id, Category.all.map{|o| [o.name, o.id]}, :include_blank => "カテゴリー選択", class: 'form-control' %>
+
+        <%= f.label :上映日 %>
+        <%= f.date_field :screening_date, class: 'form-control' %>
+
+        <%= f.submit "プレゼンを投稿", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
