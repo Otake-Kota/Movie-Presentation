@@ -1,9 +1,9 @@
 module MoviesHelper
   def spoiler_comment(movie)
     if movie.spoiler == true
-      "(ネタバレあり)"
+      "※ネタバレあり"
     else
-      "(ネタバレなし)"
+      "※ネタバレなし"
     end
   end
 end

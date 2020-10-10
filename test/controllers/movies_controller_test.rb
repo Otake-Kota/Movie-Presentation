@@ -35,4 +35,35 @@ class MoviesControllerTest < ActionDispatch::IntegrationTest
     end
     assert_redirected_to root_url
   end
+
+  test "should get show" do
+    log_in_as(users(:michael))
+    get movie_path(@movie)
+    assert_match @movie.movie_maxim, response.body
+    assert_match @movie.name, response.body
+    assert_match @movie.content, response.body
+  end
+
+  test "should redirect comment_create when not logged in" do
+    assert_no_difference 'MovieComment.count' do
+      post movie_comment_create_path(@movie), params: { movie_comment: { comment: "面白い" } }
+    end
+    assert_redirected_to login_url
+  end
+
+  test "should redirect comment_destroy when not logged in" do
+    assert_no_difference 'MovieComment.count' do
+      delete movie_comment_destroy_path(@movie), params: { movie_comment: { comment: "面白い" } }
+    end
+    assert_redirected_to login_url
+  end
+
+  test "should redirect comment_destroy for wrong movie_comment" do
+    log_in_as(users(:michael))
+    movie_comment = movie_comments(:tau_manifesto)
+    assert_no_difference 'MovieComment.count' do
+      delete movie_comment_destroy_path(movie_comment)
+    end
+    assert_redirected_to root_url
+  end
 end

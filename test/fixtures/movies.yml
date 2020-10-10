@@ -1,4 +1,5 @@
 one:
+  id: 31
   name: ハリーポッターと賢者の石
   content: 不思議な世界観に引き込まれます
   screening_date: 2001-11-16
@@ -9,6 +10,7 @@ one:
   movie_maxim: <%= Faker::Lorem.sentence(1) %>
 
 two:
+  id: 32
   name: ハリーポッターと秘密の部屋
   content: 蛇が出てきます
   screening_date: 2002-11-14
@@ -19,6 +21,7 @@ two:
   movie_maxim: <%= Faker::Lorem.sentence(1) %>
 
 three:
+  id: 33
   name: ハリーポッターとアズカバンの囚人
   content: 常に不気味な雰囲気が漂っています
   screening_date: 2004-5-31
@@ -29,6 +32,7 @@ three:
   movie_maxim: <%= Faker::Lorem.sentence(1) %>
 
 four:
+  id: 34
   name: ハリーポッターと炎のゴブレット
   content: 例のあの人が出てきます
   screening_date: 2001-11-04
@@ -40,6 +44,7 @@ four:
 
 <% 30.times do |n| %>
 movie_<%= n %>:
+  id: <%= n %>
   name: <%= Faker::Lorem.sentence(1) %>
   content: <%= Faker::Lorem.sentence(5) %>
   screening_date: 2001-11-04

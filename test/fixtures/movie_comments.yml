@@ -1,0 +1,21 @@
+orange:
+  comment: "面白かったよ"
+  user: michael
+  movie: one
+  created_at: <%= 10.minutes.ago %>
+
+tau_manifesto:
+  comment: "映画館で見たなー"
+  user_id: 2
+  movie_id: 2
+  created_at: <%= 3.years.ago %>
+
+cat_video:
+  comment: "グロシーンあった？"
+  user_id: 3
+  created_at: <%= 2.hours.ago %>
+
+most_recent:
+  comment: "すげーな"
+  user_id: 4
+  created_at: <%= Time.zone.now %>

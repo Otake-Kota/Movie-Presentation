@@ -1,1 +1,10 @@
 <% provide(:title, "Home") %>
+<div class="col-md-8">
+  <% if @movies.any? %>
+    <h3>投稿数 (<%= @movies.count %>)</h3>
+    <ol class="movies">
+      <%= render @movies %>
+    </ol>
+    <%= will_paginate @movies %>
+  <% end %>
+</div>

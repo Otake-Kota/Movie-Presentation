@@ -17,3 +17,89 @@
     height: 400px;
   }
 }
+
+.movie_show {
+  width: 100%;
+  aside {
+    height: 100px;
+  }
+  .presentation {
+    width: 100%;
+    text-align: center;
+    ul {
+      display: flex;
+      justify-content: center;
+      padding: 0px;
+      margin-bottom: 100px;
+      li {
+        list-style: none;
+        padding: 0px 20px;
+        border-right: solid 5px #eaeaea;
+      }
+      .last_li {
+        border: none;
+      }
+    }
+    p {
+      font-size: 20px
+    }
+  }
+}
+.text_wrap {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: solid 5px #eaeaea;
+  input[type="text"] {
+    width: 70%;
+  }
+  input[type="submit"] {
+    position: absolute;
+    width: 100px;
+  }
+}
+
+/* _movie_comment */
+
+.movie_comments {
+  width: 70%;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    text-align: left;
+  }
+  .user_name {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    margin-left: 60px;
+  }
+  .timestamp {
+    margin-left: 60px;
+    float: right;
+  }
+  .gravatar {
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}

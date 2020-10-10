@@ -1,0 +1,33 @@
+<div class="movie_show">
+  <aside>
+    <section class="user_info">
+        <h1>
+          <%= link_to gravatar_for(current_user), current_user %>
+          <%= link_to current_user.name, current_user %>
+        </h1>
+    </section>
+  </aside>
+  <div class="presentation">
+    <h1><%= @movie.movie_maxim %></h1>
+    <ul>
+      <li><%= @movie.created_at.strftime("%Y-%m-%d %H:%M:%S") %>投稿</li>
+      <li><%= spoiler_comment(@movie) %></li>
+      <li><%= @movie.screening_date %>上映</li>
+      <li class="last_li">カテゴリー(<%= @movie.category.name %>)</li>
+    </ul>
+    <h3><%= @movie.name %></h3>
+    <p><%= @movie.content %></p>
+  </div>
+  <div class="text_wrap">
+    <div class="">
+      <%= render 'shared/feed' %>
+    </div>
+    <%= form_for(@movie_comment, url: movie_comment_create_path(@movie)) do |f| %>
+      <div class="movie_comment">
+        <span><%= f.text_field :comment, placeholder: "コメント入力" %></span>
+        <span><%= f.submit "送信" %></span>
+      </div>
+    <% end %>
+    <%= will_paginate @feed_items %>
+  </div>
+</div>

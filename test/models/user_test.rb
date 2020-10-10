@@ -93,4 +93,12 @@ class UserTest < ActiveSupport::TestCase
       @user.destroy
     end
   end
+
+  test "qssociated movie_comments should be destroyed" do
+    @user.save
+    @user.movie_comments.create!(comment: "面白かった",movie_id: 1)
+    assert_difference 'MovieComment.count', -1 do
+      @user.destroy
+    end
+  end
 end
