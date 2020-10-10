@@ -7,7 +7,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
     @user = User.find(@movie.user_id)
     @movie_comment = @movie.movie_comments.build
-    @feed_items = @movie.feed.paginate(page: params[:page], per_page: 10)
+    @feed_items = @movie.feed.paginate(page: params[:page], per_page: 5)
   end
 
   def new
@@ -31,9 +31,14 @@ class MoviesController < ApplicationController
   end
 
   def comment_create
+    movie = Movie.find(params[:movie_id])
+    @feed_items = movie.feed.paginate(page: params[:page], per_page: 5)
     @movie_comment = current_user.movie_comments.build(comment_create_params.merge(movie_id: params[:movie_id]))
     if @movie_comment.save
-      redirect_to movie_path(params[:movie_id])
+      respond_to do |format|
+        format.html { redirect_to movie_path(params[:movie_id]) }
+        format.js
+      end
     else
       flash[:danger] = "投稿に失敗しました"
       redirect_to movie_path(params[:movie_id])

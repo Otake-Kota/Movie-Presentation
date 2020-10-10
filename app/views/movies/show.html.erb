@@ -19,10 +19,10 @@
     <p><%= @movie.content %></p>
   </div>
   <div class="text_wrap">
-    <div class="">
+    <div id="all_movie_comments">
       <%= render 'shared/feed' %>
     </div>
-    <%= form_for(@movie_comment, url: movie_comment_create_path(@movie)) do |f| %>
+    <%= form_for(@movie_comment, url: movie_comment_create_path(@movie), remote: true) do |f| %>
       <div class="movie_comment">
         <span><%= f.text_field :comment, placeholder: "コメント入力" %></span>
         <span><%= f.submit "送信" %></span>

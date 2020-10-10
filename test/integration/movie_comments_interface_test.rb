@@ -27,4 +27,15 @@ class MovieCommentsInterfaceTest < ActionDispatch::IntegrationTest
 
     assert_select 'a', text: '(削除)'
   end
+
+  test "should comment a movie with Ajax" do
+    log_in_as(@user)
+    get movie_path(@movie)
+
+
+    comment = "面白かった"
+    assert_difference "MovieComment.count", 1 do
+      post movie_comment_create_path(@movie), xhr: true, params: { movie_comment: { comment: comment } }
+    end
+  end
 end
