@@ -2,9 +2,9 @@
   <nav>
     <ul>
       <li><%= link_to "ホームページ",  root_path  %></li>
-      <li><%= link_to "プロフィール", '#' %></li>
-      <li><%= link_to "映画を紹介する", '#' %></li>
-      <li><%= link_to "いいね一覧", '#' %></li>
+      <li><%= link_to "プロフィール", current_user %></li>
+      <li><%= link_to "映画を紹介する", new_movie_path %></li>
+      <li><%= link_to "いいね一覧", likes_path %></li>
       <li><%= link_to "紹介した映画", '#' %></li>
     </ul>
   </nav>

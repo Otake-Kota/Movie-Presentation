@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201007112618) do
+ActiveRecord::Schema.define(version: 20201010124313) do
 
   create_table "blood_types", force: :cascade do |t|
     t.string "name"
@@ -28,6 +28,16 @@ ActiveRecord::Schema.define(version: 20201007112618) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "movie_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["movie_id"], name: "index_likes_on_movie_id"
+    t.index ["user_id", "movie_id"], name: "index_likes_on_user_id_and_movie_id", unique: true
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "movie_comments", force: :cascade do |t|

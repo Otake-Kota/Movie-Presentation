@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'password_resets/new'
-
-  get 'password_resets/edit'
 
   root   'static_pages#home'
   get    '/help',    to: 'static_pages#help'
@@ -18,4 +15,5 @@ Rails.application.routes.draw do
     post :comment_create
     delete :comment_destroy
   end
+  resources :likes, only: [:create, :index, :destroy]
 end

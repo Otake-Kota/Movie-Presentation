@@ -6,14 +6,19 @@
     <%= link_to movie.movie_maxim, movie %>
     <%= spoiler_comment(movie) %>
   </p>
-  <p>
-    <%= time_ago_in_words(movie.created_at) %> 前に投稿
-  </p>
-  <p>
-    <%= link_to movie.user.name , movie.user %>さんの投稿
-    <% if current_user?(movie.user) %>
-    <%= link_to "(投稿を削除する)", movie, method: :delete,
-                  data: { confirm: "本当によろしいですか?" } %>
-    <% end %>
-  </p>
+  <div class="iine_time_delete">
+    <span><%= render "likes/like", movie: movie %></span>
+    <div>
+      <p>
+        <%= time_ago_in_words(movie.created_at) %> 前に投稿
+      </p>
+      <p>
+        <%= link_to movie.user.name , movie.user %>さんの投稿
+        <% if current_user?(movie.user) %>
+        <%= link_to "(投稿を削除する)", movie, method: :delete,
+                      data: { confirm: "本当によろしいですか?" } %>
+        <% end %>
+      </p>
+    </div>
+  </div>
 </li>

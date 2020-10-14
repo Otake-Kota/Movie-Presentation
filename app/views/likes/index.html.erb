@@ -1,0 +1,9 @@
+<div class="col-md-8">
+  <% if current_user.movies.any? %>
+    <h3>投稿数 (<%= current_user.movies.count %>)</h3>
+    <ol class="movies">
+      <%= render @movies %>
+    </ol>
+    <%= will_paginate @movies %>
+  <% end %>
+</div>

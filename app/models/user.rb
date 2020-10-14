@@ -3,6 +3,7 @@ class User < ApplicationRecord
   belongs_to :blood_type, optional: true
   has_many   :movies, dependent: :destroy
   has_many   :movie_comments, dependent: :destroy
+  has_many   :likes, dependent: :destroy
 
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save :downcase_email
