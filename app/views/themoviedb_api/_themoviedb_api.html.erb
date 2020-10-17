@@ -1,0 +1,13 @@
+<% if @title == "tmbd_api_index" %>
+<div class="tmbd_api">
+  <form action="/themoviedb_api" method="get">
+    <select id="submit_select1" name="category">
+      <option value="popular">人気順</option>
+      <option value="top_rated">トップ評価順</option>
+      <option value="now_playing">上映中の映画リスト</option>
+      <option value="upcoming">上映予定の映画リスト</option>
+    </select>
+    <input type="submit" value="送信">
+  </form>
+</div>
+<% end %>

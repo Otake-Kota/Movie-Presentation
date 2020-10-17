@@ -21,4 +21,5 @@ Rails.application.routes.draw do
     delete :comment_destroy
   end
   resources :likes, only: [:create, :index, :destroy]
+  resources :themoviedb_api, only: [:index]
 end

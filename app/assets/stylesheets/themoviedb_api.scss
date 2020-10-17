@@ -1,0 +1,15 @@
+.themoviedb {
+  width: 1000px;
+  li {
+    list-style: none;
+  }
+  .col-sm-4{
+    .image{
+      width: 90%;
+      height: 50%;
+    }
+    p{
+      height: 300px;
+    }
+  }
+}
