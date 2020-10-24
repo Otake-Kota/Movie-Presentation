@@ -46,7 +46,4 @@ class MovieTest < ActiveSupport::TestCase
     assert_not @movie.valid?
   end
 
-  test "order shuld be most resent first" do
-    assert_equal movies(:four), Movie.first
-  end
 end

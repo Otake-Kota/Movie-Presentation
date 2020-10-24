@@ -1,0 +1,17 @@
+<% provide(:title, "AllMovies") %>
+<div class="all_movies">
+  <div class="search_movies">
+    <% if @movies.any? %>
+      <ol class="movies">
+        <h2>投稿一覧  投稿数 (<%= @movies.count %>)</h2>
+        <%= render @movies %>
+      </ol>
+        <%= will_paginate @movies, class: "will_paginate" %>
+    <% else %>
+    <ol class="movies">
+      <h1>検索結果がありません</h1>
+    </ol>
+    <% end %>
+  </div>
+  <%= render "movies/movie_search" %>
+</div>

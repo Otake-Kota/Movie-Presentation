@@ -16,7 +16,9 @@
         <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
       <div class="main">
-        <%= render 'layouts/each_link' %>
+        <div class="each_links">
+          <%= render 'layouts/each_link' %>
+        </div>
         <%= yield %>
       </div>
       <%= render 'layouts/footer' %>

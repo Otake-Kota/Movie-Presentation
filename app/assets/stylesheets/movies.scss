@@ -1,26 +1,108 @@
 /* _movie */
 
+.movies {
+  background: rgba(0,0,0,0.6);
+  border: solid 3px white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  margin-left: 20px;
+  h2 {
+    color: white;
+  }
+  h1 {
+    color: white;
+    padding-left: 10px;
+    padding-right: 50px;
+  }
+}
+
 ._movie {
-  border-bottom: solid 1px gray;
+  border-bottom: solid 1px white;
   margin-bottom: 20px;
+  color: white;
+  width: 500px;
+  .movie_user {
+    font-size: 20px;
+  }
   p {
     margin: 0;
     padding: 0;
+    color: white;
   }
   .movie_maxim {
     font-size: 30px;
+    a {
+      text-decoration: none;
+      color: white
+    }
+    .badge-danger {
+      background-color: red;
+    }
+    .badge-success {
+      background-color: #28a745;
+    }
   }
   .iine_time_delete {
     display: flex;
     span{
       font-size: 15px;
     }
+    div {
+      p {
+        a {
+          text-decoration: none;
+        }
+      }
+    }
   }
 }
 
+._movie a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+._movie a::after {
+  position: absolute;
+  bottom: -0.1px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: white;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+}
+
+._movie a:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+/* movie_new */
+
 .movie_new {
+  background: rgba(0,0,0,0.6);
+  border: solid 3px white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  margin-left: 10px;
+  padding-bottom: 10px;
+  h1 {
+    color: white;
+  }
+  .label {
+    color: white;
+    font-size: 20px;
+  }
   .content {
     height: 400px;
+  }
+  span {
+    color: red;
+    font-size: 13px;
   }
 }
 
@@ -32,6 +114,13 @@
   .presentation {
     width: 100%;
     text-align: center;
+    background: rgba(0,0,0,0.6);
+    box-shadow: 0 0 10px black;
+    border-radius: 10px;
+    margin: 0 20px;
+    h1 {
+      color: white;
+    }
     ul {
       display: flex;
       justify-content: center;
@@ -41,13 +130,18 @@
         list-style: none;
         padding: 0px 20px;
         border-right: solid 5px #eaeaea;
+        color: white;
       }
       .last_li {
         border: none;
       }
     }
+    h3 {
+      color: white;
+    }
     p {
-      font-size: 20px
+      font-size: 20px;
+      color: white;
     }
   }
 }
@@ -55,7 +149,8 @@
   text-align: center;
   margin-top: 50px;
   padding-top: 50px;
-  border-top: solid 5px #eaeaea;
+  border-top: solid 4px #eaeaea;
+  background: rgba(0,0,0,0.6);
   input[type="text"] {
     width: 70%;
   }
@@ -85,10 +180,12 @@
   }
   .content {
     margin-left: 60px;
+    color: white;
   }
   .timestamp {
     margin-left: 60px;
     float: right;
+    color: white;
   }
   .gravatar {
     margin-right: 10px;
@@ -108,4 +205,17 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+
+/* _movie_search */
+
+.movie_search {
+  width: 300px;
+  height: 200px;
+  background: rgba(0,0,0,0.6);
+  box-shadow: 0 0 10px black;
+  border-radius: 10px;
+  border: 2px solid white;
+  margin-left: 10px;
 }

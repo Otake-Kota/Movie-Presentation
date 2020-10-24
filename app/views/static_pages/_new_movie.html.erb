@@ -1,0 +1,24 @@
+<div class="new_movies">
+  <h2>最新のプレゼン<%= @movies.length %>選</h2>
+  <div class="new_movie">
+    <% @movies.each do |movie| %>
+      <div class="card">
+          <h4 class="card-title">
+            <%= movie.movie_maxim %>
+            <%= render partial: "movies/spoiler", locals: { movie: movie } %>
+          </h4>
+          <div class="card-body">
+            <p class="card-text">タイトル: <%= movie.name %></p>
+            <p>カテゴリー: <%= movie.category.name %></p>
+            <p>
+              <%= link_to movie.user do %>
+                <%= movie.user.name %>
+              <% end %>
+              さんの投稿
+            </p>
+            <%= link_to "プレゼンをチュック", movie, class: "btn btn-primary" %>
+          </div>
+      </div>
+    <% end %>
+  </div>
+</div>

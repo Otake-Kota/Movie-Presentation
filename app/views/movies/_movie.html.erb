@@ -4,7 +4,7 @@
   </p>
   <p class="movie_maxim">
     <%= link_to movie.movie_maxim, movie %>
-    <%= spoiler_comment(movie) %>
+    <%= render partial: "movies/spoiler", locals: { movie: movie } %>
   </p>
   <div class="iine_time_delete">
     <span><%= render "likes/like", movie: movie %></span>

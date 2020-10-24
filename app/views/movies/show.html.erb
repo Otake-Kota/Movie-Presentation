@@ -29,6 +29,6 @@
         <span><%= f.submit "送信" %></span>
       </div>
     <% end %>
-    <%= will_paginate @feed_items %>
+    <%= will_paginate @feed_items, class: "will_paginate" %>
   </div>
 </div>

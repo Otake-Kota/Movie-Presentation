@@ -1,2 +1,0 @@
-class Profession < ApplicationRecord
-end

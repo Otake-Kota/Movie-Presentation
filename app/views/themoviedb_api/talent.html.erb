@@ -1,0 +1,27 @@
+<% provide(:title, 'TMDb_talents') %>
+<div class="TMDb_talents">
+  <div class="col-md-6 col-md-offset-3">
+    <form class="navbar-form navbar-left" action="/themoviedb_api/talent" method="get">
+      <h2>タレント名を入力してください</h2>
+      <input type="search" name="search" placeholder="キーワードを入力", class='form-control'>
+      <input type="submit" name="submit" value="検索", class='form-control'>
+    </form>
+  </div>
+
+  <div class="talents">
+    <% unless @talents.blank? %>
+    <ul class="row">
+      <% @talents.each do |talent| %>
+      <li class="col-sm-4">
+          <%= link_to talent_show_themoviedb_api_index_path(talent['id']) do %>
+            <p><%= talent['name'] %></p>
+            <%= image_tag profile_image(talent['profile_path']), class: 'image' %>
+          <% end %>
+      </li>
+      <% end %>
+    </ul>
+    <% else %>
+    <h1>検索結果がありません</h1>
+    <% end %>
+  </div>
+</div>

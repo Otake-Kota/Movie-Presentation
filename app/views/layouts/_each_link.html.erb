@@ -1,15 +1,17 @@
 <div class="each_link">
   <%= render "themoviedb_api/themoviedb_api" %>
   <nav>
-    <ul>
-      <li><%= link_to "ホームページ",  root_path  %></li>
-      <li><%= link_to "プロフィール", current_user %></li>
-      <li><%= link_to "映画を紹介する", new_movie_path %></li>
-      <li><%= link_to "いいね一覧", likes_path %></li>
-      <li><%= link_to "紹介した映画", '#' %></li>
-      <li><%= link_to "フォロワー", '#' %></li>
-      <li><%= link_to "フォロー中", '#' %></li>
-      <li><%= link_to "映画情報", themoviedb_api_index_path %></li>
+    <ul class="list-group">
+      <li class="list-group-item"><%= link_to "プロフィール", current_user %></li>
+      <li class="list-group-item"><%= link_to "映画を紹介する", new_movie_path %></li>
+      <li class="list-group-item"><%= link_to "いいね一覧", likes_path %></li>
+      <% if logged_in? %>
+      <li class="list-group-item"><%= link_to "フォロー中", following_user_path(current_user) %></li>
+      <li class="list-group-item"><%= link_to "フォロワー", followers_user_path(current_user) %></li>
+      <% end %>
+      <li class="list-group-item"><%= link_to "映画情報", themoviedb_api_index_path %></li>
+      <li class="list-group-item"><%= link_to "タレント検索", talent_themoviedb_api_index_path %></li>
+      <li class="list-group-item"><%= link_to "ホームページ",  root_path  %></li>
     </ul>
   </nav>
 </div>

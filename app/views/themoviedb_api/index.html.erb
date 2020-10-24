@@ -1,13 +1,13 @@
-<% provide(:title, 'TMDb') %>
+<% provide(:title, 'TMDb_movies') %>
 <div class="container-fluid">
   <h1><%= @list %></h1>
   <div class="row">
-    <div class="themoviedb">
+    <div class="themoviedb_api_index">
       <ul>
         <% @movies.each do |movie| %>
         <li>
-            <div class="col-sm-4" style="background-color:white;">
-              <%= image_tag "//image.tmdb.org/t/p/w440_and_h660_face/#{  movie['poster_path']  }", class: 'image' %>
+            <div class="col-sm-4">
+                <%= image_tag "//image.tmdb.org/t/p/w440_and_h660_face/#{  movie['poster_path']  }", class: 'image' %>
               <p>
                 <%= movie['overview'] %>
               </p>

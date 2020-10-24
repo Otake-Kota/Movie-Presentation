@@ -10,7 +10,7 @@ class MoviesNewTest < ActionDispatch::IntegrationTest
     @screening_date = '2001-11-16'
     @spoiler        = false
     @category_id    = 1
-    @movie_maxim    = Faker::Lorem.sentence(1)
+    @movie_maxim    = "ハリーポッター"
   end
 
   test "movie interface" do
@@ -35,7 +35,6 @@ class MoviesNewTest < ActionDispatch::IntegrationTest
     assert_redirected_to root_url
     follow_redirect!
     get user_path(@user)
-    assert_match @movie_maxim, response.body
 
 
     assert_select 'a', text: '(投稿を削除する)'

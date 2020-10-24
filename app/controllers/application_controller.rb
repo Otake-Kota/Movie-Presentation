@@ -1,7 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
-  
+  include ThemoviedbApiHelper
+  include StaticPagesHelper
+  include MoviesHelper
   private
 
     def logged_in_user

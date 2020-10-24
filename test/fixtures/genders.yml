@@ -1,11 +1,8 @@
-one:
-  id: 1
+man:
   name: 男
 
-two:
-  id: 2
+woman:
   name: 女
 
-three:
-  id: 3
+other:
   name: その他

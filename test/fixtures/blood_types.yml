@@ -1,15 +1,11 @@
 one:
-  id: 1
   name: A
 
 two:
-  id: 2
   name: B
 
 three:
-  id: 3
   name: AB
 
 four:
-  id: 4
   name: O

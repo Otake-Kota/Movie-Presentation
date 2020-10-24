@@ -1,10 +1,15 @@
 <% provide(:title, "Home") %>
-<div class="col-md-8">
-  <% if @movies.any? %>
-    <h3>投稿数 (<%= @movies.count %>)</h3>
-    <ol class="movies">
-      <%= render @movies %>
-    </ol>
-    <%= will_paginate @movies %>
-  <% end %>
+<div class="home row">
+  <div class="jumbotron">
+    <div class="container">
+      <h1>MoviePresentation</h1>
+      <p>これは自分の好きな映画を他のユーザーにプレゼンして魅力を伝えたり、今まで見たことのなかった映画を発見するためのアプリです</p>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <%= render 'static_pages/like_movie_rank' %>
+  </div>
+  <div class="col-md-12">
+    <%= render 'static_pages/new_movie' %>
+  </div>
 </div>

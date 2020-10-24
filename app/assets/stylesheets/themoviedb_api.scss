@@ -1,15 +1,113 @@
-.themoviedb {
+
+
+.themoviedb_api_index {
   width: 1000px;
   li {
     list-style: none;
   }
   .col-sm-4{
-    .image{
-      width: 90%;
-      height: 50%;
-    }
+    border: solid 2px white;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.6);
+    margin-bottom: 50px;
+    padding-top: 20px;
+    box-shadow: 0 0 10px black;
+      .image{
+        display: block;
+        width: 90%;
+        height: 50%;
+        margin: 0 auto;
+      }
     p{
       height: 300px;
+      color: white;
+    }
+  }
+}
+
+/* talent */
+
+.TMDb_talents{
+  form {
+    border: solid 1px white;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.6);
+    box-shadow: 0 0 10px black;
+    h2 {
+      color: white;
+    }
+    .form-control{
+      width: 100%;
+    }
+  }
+  h1 {
+    color: white;
+  }
+}
+
+.talents {
+  width: 1000px;
+  margin-top: 100px;
+  li {
+    list-style: none;
+    box-shadow: 0 0 10px black;
+    background: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    border: solid 2px white;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  .col-sm-4{
+    .image{
+      width: 160px;
+      height: 210px;
+      margin-bottom: 50px;
+      display: block;
+      margin:0 auto;
+      padding-bottom: 10px;
+    }
+    p{
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+  h1 {
+    text-align: center;
+    margin-top: 200px;
+  }
+}
+
+.TMDb_talents .talents .row .col-sm-4 p a {
+  text-decoration: none;
+  color: white;
+}
+
+/* talent_profile */
+
+.talent_profile {
+  display: flex;
+  width: 1000px;
+  .image {
+    margin: 20px;
+  }
+  span{
+    font-size: 20px;
+  }
+  div {
+    box-shadow: 0 0 10px black;
+    background: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    border: solid 2px white;
+    margin-top: 20px;
+    padding: 20px;
+    h1 {
+      color: white;
+      text-align: center;
+    }
+    p {
+      color: white;
     }
   }
 }

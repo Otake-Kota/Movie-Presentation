@@ -1,0 +1,25 @@
+<% provide(:title, 'TMDb_talent_show') %>
+
+
+<div class="talent_profile">
+  <p class="image">
+    <%= image_tag "//image.tmdb.org/t/p/w440_and_h660_face/#{  @talent['profile_path']  }"%>
+  </p>
+  <div>
+    <h1 class="name">
+      <%= @talent['name'] %>
+    </h1>
+    <p class="birthday">
+      <span>誕生日:</span>
+      <%= @talent['birthday'] %>
+    </p>
+    <p class="place_of_birth">
+      <span>出身: </span>
+      <%= @talent['place_of_birth'] %>
+    </p>
+    <p class="biography">
+      <span>人物紹介: </span>
+      <%= @talent['biography'] %>
+    </p>
+  </div>
+</div>

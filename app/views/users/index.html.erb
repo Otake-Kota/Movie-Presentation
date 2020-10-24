@@ -2,12 +2,12 @@
 <div class="layout index">
   <h1>All users</h1>
 
-  <%= will_paginate %>
+  <%= will_paginate @users, class: "will_paginate" %>
 
   <ul class="users">
     <%= render @users %>
   </ul>
 
-  <%= will_paginate %>
+  <%= will_paginate @users, class: "will_paginate" %>
 
 </div>

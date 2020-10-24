@@ -1,0 +1,12 @@
+<div class="like_movie_rank">
+  <h2>いいね数の多いプレゼンランキング</h2>
+  <div class="rank">
+    <% @all_ranks.each.with_index(1) do |rank, i| %>
+        <p>
+          <%= i %>位:
+          <%= link_to rank.movie_maxim, rank %>
+           (<%= @length[i-1] %>件)
+        </p>
+    <% end %>
+  </div>
+</div>

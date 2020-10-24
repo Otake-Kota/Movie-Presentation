@@ -1,0 +1,21 @@
+<div class="movie_search">
+  <form class="navbar-form navbar-left search" action="/static_pages/all_movies" method="get">
+    <input type="keyword" name="keyword" placeholder="キーワードを入力", class='form-control'>
+    <select name="category" value="category">
+      <option value="">カテゴリーを選択できます</option>
+      <% Category.all.each do |category| %>
+      <option value=<%= category.id %>>
+        <%= category.name %>
+      </option>
+      <% end %>
+    </select>
+    <select name="order" value="order">
+      <option value="">順序を選択できます</option>
+      <option value="screening_date_desc">映画上映が新しい順</option>
+      <option value="screening_date_asc">映画上映が古い順</option>
+      <option value="created_at_desc">投稿が新しい順</option>
+      <option value="created_at_asc">投稿が古い順</option>
+    </select>
+    <input type="submit" name="submit" value="検索", class='form-control'>
+  </form>
+</div>

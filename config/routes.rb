@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root   'static_pages#home'
-  get    '/help',    to: 'static_pages#help'
+  get    '/static_pages/all_movies',    to: 'static_pages#all_movies'
 
   get    '/signup',  to: 'users#new'
   post   '/signup',  to: 'users#create'
@@ -21,5 +21,10 @@ Rails.application.routes.draw do
     delete :comment_destroy
   end
   resources :likes, only: [:create, :index, :destroy]
-  resources :themoviedb_api, only: [:index]
+  resources :themoviedb_api, only: [:index] do
+    collection do
+      get :talent
+      get '/talent/:id', to: 'themoviedb_api#talent_show', as: "talent_show"
+    end
+  end
 end
