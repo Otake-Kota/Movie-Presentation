@@ -15,4 +15,10 @@ class UserMailerPreview < ActionMailer::Preview
     UserMailer.password_reset(user)
   end
 
+  # Preview this email at
+  # http://localhost:3000/rails/mailers/user_mailer/recomend_movies
+  def recomend_movies
+    user = User.first
+    UserMailer.recomend_movies(user)
+  end
 end

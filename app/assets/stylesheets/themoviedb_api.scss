@@ -28,14 +28,17 @@
 /* talent */
 
 .TMDb_talents{
+  h2 {
+    color: white;
+    text-align: center;
+  }
   form {
     border: solid 1px white;
     border-radius: 10px;
     background: rgba(0,0,0,0.6);
     box-shadow: 0 0 10px black;
-    h2 {
-      color: white;
-    }
+    width: 500px;
+    padding-top: 15px;
     .form-control{
       width: 100%;
     }

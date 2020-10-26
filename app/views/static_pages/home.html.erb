@@ -6,10 +6,12 @@
       <p>これは自分の好きな映画を他のユーザーにプレゼンして魅力を伝えたり、今まで見たことのなかった映画を発見するためのアプリです</p>
     </div>
   </div>
-  <div class="col-md-8">
-    <%= render 'static_pages/like_movie_rank' %>
+  <div class="col-md-12">
+    <h2>最新のプレゼン<%= @movies.length %>選</h2>
+    <%= render 'static_pages/new_movie' %>
   </div>
   <div class="col-md-12">
-    <%= render 'static_pages/new_movie' %>
+    <h2>いいね数の多いプレゼンランキング</h2>
+    <%= render 'static_pages/like_movie_rank' %>
   </div>
 </div>

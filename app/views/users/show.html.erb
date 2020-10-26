@@ -1,5 +1,4 @@
 <% provide(:title, @user.name) %>
-
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
@@ -9,27 +8,7 @@
         <p>投稿数: <%= @user.movies.length %></p>
       </h1>
     </section>
-    <div class="my_profile">
-      <ul>
-        <h2>-プロフィール-</h2>
-        <li>
-          <span>性別: </span>
-          <%= @user.gender_id.blank? ? "未設定" : @user.gender.name %>
-        </li>
-        <li>
-          <span>血液型: </span>
-          <%= @user.blood_type.blank? ? "未設定" : @user.blood_type.name %>
-        </li>
-        <li>
-          <span>誕生日: </span>
-          <%= @user.birthday.blank? ? "未設定" : @user.birthday %>
-        </li>
-        <li>
-          <span>コメント: </span>
-          <%= @user.comment.blank? ? "未設定" : @user.comment %>
-        </li>
-      </ul>
-    </div>
+    <%= render "users/my_profile" %>
   </aside>
   <div class="col-md-8">
     <div class="follow_form">

@@ -1,0 +1,7 @@
+今週のオススメの映画
+<%= @user.name %>様このたびはMoviePresentationをご利用いただき誠にありがとうございます。今週のオススメのプレゼンは以下の通りです。<%= @user.name %>様に新しい映画との出会いがある事を心から願います。
+<% @movies.each.with_index(1) do |movie, i| %>
+  <%= link_to movie do %>
+    <%= i %>: <%= movie.movie_maxim %>
+  <% end %>
+<% end %>
