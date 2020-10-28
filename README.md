@@ -1,24 +1,28 @@
-# README
+# Name
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+MoviePresentation
 
-Things you may want to cover:
+## Description
 
-* Ruby version
+MoviePresentationはユーザーが自分の好きな映画を紹介する事で、その映画の魅力を共有したり、自分以外のユーザーが書いた投稿によって、今まで知らなかった新しい映画に出会ったりするためのアプリです。
 
-* System dependencies
 
-* Configuration
+## 機能
 
-* Database creation
+・サインイン機能、ログイン機能(テストログイン機能)
+・映画のプレゼンの投稿
+・投稿のいいね機能
+・フォロー機能
+・タレントの検索
+・人気な映画、高評価映画、最新の映画、上映映画の表示
 
-* Database initialization
 
-* How to run the test suite
+## 環境
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+・Ruby 2.6.5
+・rails 5.1.6
+・bootstrap-sass 3.3.7
+・bcrypt 3.1.12
+・faker 1.7.3
+・will_paginate 3.1.6
+・pg 0.20.0
